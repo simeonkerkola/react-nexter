@@ -17,3 +17,36 @@ body {
   font-weight: 300;
   line-height: 1.6;
 }
+
+.container {
+  display: grid;
+
+  // 1st row 80vh
+  // 2nd row, height of its content
+  // 3rd row 40% of vp width
+  // 4th row, height of its content
+  // 5th row, height of its content
+  // 6th row, height of its content
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+
+  // 1140px is a common width for a page
+  // 1140px/8col = 142.5px = 14rem
+  // 8rem sidebar, 8 columns width between min-content and 140px
+  // Two 1fr columns on the sides of the grid helps to center the grid to view port
+  // full = full bleed section
+  grid-template-columns:
+    [sidebar-start]
+    8rem
+    [sidebar-end full-start]
+    minmax(6rem, 1fr)
+    [center-start]
+    repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end]
+    minmax(6rem, 1fr)
+    [full-end];
+
+  & > * {
+    font-size: 2rem;
+    padding: 3rem;
+  }
+}

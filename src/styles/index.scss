@@ -1,11 +1,42 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
-
 @import './variables.scss';
 @import './base.scss';
 
 // Components
+@import '../components/Header.scss';
 @import '../components/LandingPage.scss';
+@import '../components/Sidebar.scss';
+
+.realtors {
+  background-color: $color-secondary;
+  grid-column: col-start 7 / full-end;
+}
+
+.features {
+  background-color: $color-grey-light-2;
+  grid-column: center-start / center-end;
+}
+
+.story__pictures {
+  background-color: $color-primary;
+  grid-column: full-start / col-end 4;
+}
+
+.story__content {
+  background-color: $color-grey-light-1;
+  grid-column: col-start 5 / full-end;
+}
+
+.homes {
+  background-color: $color-secondary;
+  grid-column: center-start / center-end;
+}
+
+.gallery {
+  background-color: $color-grey-dark-2;
+  grid-column: full-start / full-end;
+}
+
+.footer {
+  background-color: $color-secondary;
+  grid-column: full-start / full-end;
+}
