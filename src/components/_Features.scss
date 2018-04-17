@@ -1,0 +1,31 @@
+.features {
+  align-items: start;
+  display: grid;
+  grid-gap: $spacing-l; //sub-grid
+  grid-column: center-start / center-end;
+  //  grid-template-columns: repeat(3, 1fr); // sub-grid
+
+  // auto-fit creates as many tracks as can fit to a width
+  // minmax width always between 25rem and 1fr
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); // sub-grid
+  margin: $spacing-xl 0;
+}
+
+.feature {
+  display: grid;
+  grid-column-gap: $spacing-m;
+  grid-template-columns: min-content, 1fr;
+  font-size: $font-size-l;
+  align-items: center;
+}
+
+.feature__icon {
+  fill: $color-primary-dark;
+  grid-row: 1 / 2;
+  height: $icon-size-m;
+  width: $icon-size-m;
+}
+
+.feature__text {
+  grid-column: 2 / 3;
+}
