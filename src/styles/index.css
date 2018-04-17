@@ -19,9 +19,41 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
-  .container > * {
-    font-size: 2rem;
-    padding: 3rem; }
+
+.heading-4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400; }
+
+.heading-4 {
+  font-size: 1.785rem; }
+  .heading-4--light {
+    color: #f9f7f6; }
+  .heading-4--dark {
+    color: #54483a; }
+
+.features {
+  align-items: start;
+  display: grid;
+  grid-gap: 4.5rem;
+  grid-column: center-start / center-end;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  margin: 6rem 0; }
+
+.feature {
+  display: grid;
+  grid-column-gap: 3rem;
+  grid-template-columns: min-content, 1fr;
+  font-size: 1.7rem;
+  align-items: center; }
+
+.feature__icon {
+  fill: #b28451;
+  grid-row: 1 / 2;
+  height: 4.5rem;
+  width: 4.5rem; }
+
+.feature__text {
+  grid-column: 2 / 3; }
 
 .header {
   background-color: #54483a;
@@ -36,10 +68,6 @@ body {
 .realtors {
   background-color: #101d2c;
   grid-column: col-start 7 / full-end; }
-
-.features {
-  background-color: #aaa;
-  grid-column: center-start / center-end; }
 
 .story__pictures {
   background-color: #c69963;

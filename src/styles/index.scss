@@ -2,6 +2,7 @@
 @import './base.scss';
 
 // Components
+@import '../components/Features.scss';
 @import '../components/Header.scss';
 @import '../components/LandingPage.scss';
 @import '../components/Sidebar.scss';
@@ -9,11 +10,6 @@
 .realtors {
   background-color: $color-secondary;
   grid-column: col-start 7 / full-end;
-}
-
-.features {
-  background-color: $color-grey-light-2;
-  grid-column: center-start / center-end;
 }
 
 .story__pictures {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Sidebar from './Sidebar';
 import Header from './Header';
+import Features from './Features';
 
 class LandingPage extends Component {
   render() {
@@ -9,7 +10,7 @@ class LandingPage extends Component {
         <Sidebar />
         <Header />
         <div className="realtors">Top 3 realtors</div>
-        <section className="features">Features</section>
+        <Features />
         <div className="story__pictures">pictures</div>
         <div className="story__content">content</div>
         <section className="homes">Homes</section>
