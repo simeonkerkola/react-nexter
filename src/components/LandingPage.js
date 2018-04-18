@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Sidebar from './Sidebar';
 import Header from './Header';
 import Features from './Features';
+import Story from './Story';
 
 class LandingPage extends Component {
   render() {
@@ -11,8 +12,7 @@ class LandingPage extends Component {
         <Header />
         <div className="realtors">Top 3 realtors</div>
         <Features />
-        <div className="story__pictures">pictures</div>
-        <div className="story__content">content</div>
+        <Story />
         <section className="homes">Homes</section>
         <section className="gallery">Gallery</section>
         <footer className="footer">Footer</footer>

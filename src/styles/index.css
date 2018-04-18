@@ -15,14 +15,37 @@ body {
   font-weight: 300;
   line-height: 1.6; }
 
+a {
+  color: currentColor;
+  font-weight: 600;
+  transition: all .2s; }
+  a:hover {
+    color: #b28451; }
+
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
-.heading-4 {
+.heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
+
+.heading-2 {
+  font-style: italic;
+  font-size: 3.5rem;
+  line-height: 1;
+  margin-bottom: 3rem; }
+  .heading-2--light {
+    color: #f9f7f6; }
+  .heading-2--dark {
+    color: #54483a; }
+
+.heading-3 {
+  color: #b28451;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase; }
 
 .heading-4 {
   font-size: 1.785rem; }
@@ -31,10 +54,23 @@ body {
   .heading-4--dark {
     color: #54483a; }
 
+.btn {
+  background-color: #c69963;
+  color: white;
+  display: inline-block;
+  font-size: 1.4rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 2rem 3rem;
+  transition: all .2s; }
+  .btn:hover {
+    background-color: #b28451;
+    color: white; }
+
 .features {
   align-items: start;
   display: grid;
-  grid-gap: 4.5rem;
+  grid-gap: 4rem;
   grid-column: center-start / center-end;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   margin: 6rem 0; }
@@ -65,17 +101,31 @@ body {
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1; }
 
+.story {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  grid-column: full-start / full-end; }
+
+.story__pictures {
+  background-color: #c69963; }
+
+.story__content {
+  align-items: flex-start;
+  background-color: #f9f7f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 8vw; }
+
+.story__text {
+  font-size: 1.6rem;
+  font-style: italic;
+  margin-bottom: 4rem; }
+
 .realtors {
   background-color: #101d2c;
   grid-column: col-start 7 / full-end; }
-
-.story__pictures {
-  background-color: #c69963;
-  grid-column: full-start / col-end 4; }
-
-.story__content {
-  background-color: #f9f7f6;
-  grid-column: col-start 5 / full-end; }
 
 .homes {
   background-color: #101d2c;

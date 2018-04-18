@@ -18,6 +18,16 @@ body {
   line-height: 1.6;
 }
 
+a {
+  color: currentColor;
+  font-weight: 600;
+  transition: all .2s;
+
+  &:hover {
+    color: $color-primary-dark;
+  }
+}
+
 .container {
   display: grid;
 
@@ -44,23 +54,4 @@ body {
     [center-end]
     minmax(6rem, 1fr)
     [full-end];
-}
-
-%heading {
-  font-family: $font-display;
-  font-weight: 400;
-}
-
-.heading-4 {
-  @extend %heading;
-
-  font-size: $font-size-l * 1.05;
-
-  &--light {
-    color: $color-grey-light-1;
-  }
-
-  &--dark {
-    color: $color-grey-dark-1;
-  }
 }

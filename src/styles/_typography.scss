@@ -1,0 +1,44 @@
+%heading {
+  font-family: $font-display;
+  font-weight: 400;
+}
+
+.heading-2 {
+  @extend %heading;
+
+  font-style: italic;
+  font-size: $font-size-xxl;
+  line-height: 1;
+  margin-bottom: $spacing-m;
+
+  &--light {
+    color: $color-grey-light-1;
+  }
+
+  &--dark {
+    color: $color-grey-dark-1;
+  }
+}
+
+.heading-3 {
+  @extend %heading;
+
+  color: $color-primary-dark;
+  font-size: $font-size-m;
+  margin-bottom: $spacing-s;
+  text-transform: uppercase;
+}
+
+.heading-4 {
+  @extend %heading;
+
+  font-size: $font-size-l * 1.05;
+
+  &--light {
+    color: $color-grey-light-1;
+  }
+
+  &--dark {
+    color: $color-grey-dark-1;
+  }
+}
