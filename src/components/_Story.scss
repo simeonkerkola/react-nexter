@@ -5,10 +5,37 @@
   grid-column: full-start / full-end;
 }
 
+// PICTURES PART
 .story__pictures {
+  align-items: center;
   background-color: $color-primary;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary, .5),
+    rgba($color-primary-dark, .5)
+  ),
+    url(/img/back.jpg);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
 }
 
+.story__img--1 {
+  box-shadow: $image-shadow;
+  grid-column: 2 / 6;
+  grid-row: 2 / 6;
+  width: 100%;
+}
+
+.story__img--2 {
+  box-shadow: $image-shadow;
+  grid-column: 4 / 7;
+  grid-row: 4 / 7;
+  width: 115%; // Spills on top of the content from the right
+  z-index: 10;
+}
+
+// CONTENT PART
 .story__content {
   align-items: flex-start;
   background-color: $color-grey-light-1;
