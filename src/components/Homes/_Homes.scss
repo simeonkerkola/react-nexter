@@ -1,0 +1,12 @@
+.homes {
+  grid-column: center-start / center-end;
+  margin: $spacing-huge 0;
+
+  // Sub-grid
+  display: grid;
+  grid-gap: $spacing-l;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(25rem, 1fr)
+  ); // auto-fit: as many columns as fits
+}

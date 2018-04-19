@@ -3,6 +3,7 @@ import Sidebar from './Sidebar';
 import Header from './Header';
 import Features from './Features';
 import Story from './Story';
+import Homes from './Homes/Homes';
 
 class LandingPage extends Component {
   render() {
@@ -13,7 +14,7 @@ class LandingPage extends Component {
         <div className="realtors">Top 3 realtors</div>
         <Features />
         <Story />
-        <section className="homes">Homes</section>
+        <Homes />
         <section className="gallery">Gallery</section>
         <footer className="footer">Footer</footer>
       </div>

@@ -8,7 +8,7 @@
   // auto-fit creates as many tracks as can fit to a width
   // minmax width always between 25rem and 1fr
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); // sub-grid
-  margin: $spacing-xl 0;
+  margin: $spacing-huge 0;
 }
 
 .feature {

@@ -1,7 +1,6 @@
 .story {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-column: full-start / full-end;
 }
 
@@ -43,6 +42,7 @@
   flex-direction: column;
   justify-content: center;
   padding: $spacing-xl 8vw;
+  min-height: 0; // Prevents the next row to spill over this parent grid
 }
 
 .story__text {

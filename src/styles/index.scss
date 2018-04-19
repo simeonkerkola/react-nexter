@@ -1,23 +1,20 @@
-@import './variables.scss';
-@import './base.scss';
-@import './typography.scss';
-@import './buttons.scss';
+@import './variables';
+@import './base';
+@import './typography';
+@import './buttons';
 
 // Components
-@import '../components/Features.scss';
-@import '../components/Header.scss';
-@import '../components/LandingPage.scss';
-@import '../components/Sidebar.scss';
-@import '../components/Story.scss';
+@import '../components/Features';
+@import '../components/Header';
+@import '../components/Homes/Homes';
+@import '../components/Homes/HomeCard';
+@import '../components/LandingPage';
+@import '../components/Sidebar';
+@import '../components/Story';
 
 .realtors {
   background-color: $color-secondary;
   grid-column: col-start 7 / full-end;
-}
-
-.homes {
-  background-color: $color-secondary;
-  grid-column: center-start / center-end;
 }
 
 .gallery {
