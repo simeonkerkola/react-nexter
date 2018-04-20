@@ -4,6 +4,7 @@ import Header from './Header';
 import Features from './Features';
 import Story from './Story';
 import Homes from './Homes/Homes';
+import Gallery from './Gallery';
 
 class LandingPage extends Component {
   render() {
@@ -15,7 +16,7 @@ class LandingPage extends Component {
         <Features />
         <Story />
         <Homes />
-        <section className="gallery">Gallery</section>
+        <Gallery />
         <footer className="footer">Footer</footer>
       </div>
     );
