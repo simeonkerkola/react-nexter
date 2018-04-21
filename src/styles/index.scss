@@ -5,6 +5,7 @@
 
 // Components
 @import '../components/Features';
+@import '../components/Footer';
 @import '../components/Gallery';
 @import '../components/Header';
 @import '../components/Homes/Homes';
@@ -16,9 +17,4 @@
 .realtors {
   background-color: $color-secondary;
   grid-column: col-start 7 / full-end;
-}
-
-.footer {
-  background-color: $color-secondary;
-  grid-column: full-start / full-end;
 }

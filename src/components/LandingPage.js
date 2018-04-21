@@ -5,6 +5,7 @@ import Features from './Features';
 import Story from './Story';
 import Homes from './Homes/Homes';
 import Gallery from './Gallery';
+import Footer from './Footer';
 
 class LandingPage extends Component {
   render() {
@@ -17,7 +18,7 @@ class LandingPage extends Component {
         <Story />
         <Homes />
         <Gallery />
-        <footer className="footer">Footer</footer>
+        <Footer />
       </div>
     );
   }
