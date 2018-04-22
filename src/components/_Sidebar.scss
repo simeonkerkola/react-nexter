@@ -1,5 +1,43 @@
 .sidebar {
+  align-items: flex-start;
   background: $color-primary;
+  display: flex;
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1; // Start at the beginning, stretch until the end
+  justify-content: center;
+  padding-top: $spacing-m;
+}
+
+.nav-btn,
+.nav-btn:focus {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  outline: none;
+  padding: $spacing-s;
+}
+
+.spanburger {
+  background-color: white;
+  display: block; // have to define
+  height: 2px;
+  width: 4.5rem;
+
+  &::before,
+  &::after {
+    background-color: white;
+    content: '';
+    display: block; // have to define
+    height: 2px;
+    width: 4.5rem;
+  }
+
+  &::before {
+    transform: translateY(-1.5rem);
+  }
+
+  &::after {
+    transform: translateY(1.3rem);
+  }
 }
