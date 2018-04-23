@@ -3,13 +3,20 @@
   font-weight: 400;
 }
 
+.heading-1 {
+  @extend %heading;
+
+  color: $color-grey-light-1;
+  font-size: $font-size-xxl;
+  line-height: 1;
+}
+
 .heading-2 {
   @extend %heading;
 
   font-style: italic;
   font-size: $font-size-xxl;
   line-height: 1;
-  margin-bottom: $spacing-m;
 
   &--light {
     color: $color-grey-light-1;
@@ -25,7 +32,7 @@
 
   color: $color-primary-dark;
   font-size: $font-size-m;
-  margin-bottom: $spacing-s;
+  //  margin-bottom: $spacing-s;
   text-transform: uppercase;
 }
 
