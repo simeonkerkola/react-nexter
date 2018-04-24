@@ -31,13 +31,16 @@ a {
 .container {
   display: grid;
 
-  // 1st row 80vh
+  // 1st row 80vh, min 450px
   // 2nd row, height of its content
   // 3rd row 40% of vp width
   // 4th row, height of its content
   // 5th row, height of its content
   // 6th row, height of its content
-  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-rows: minmax(80vh, 45rem) min-content 40vw repeat(
+    3,
+    min-content
+  );
 
   // 1140px is a common width for a page
   // 1140px/8col = 142.5px = 14rem

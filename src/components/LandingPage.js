@@ -6,6 +6,7 @@ import Story from './Story';
 import Homes from './Homes/Homes';
 import Gallery from './Gallery';
 import Footer from './Footer';
+import Realtors from './Realtors';
 
 class LandingPage extends Component {
   render() {
@@ -13,7 +14,7 @@ class LandingPage extends Component {
       <div className="container">
         <Sidebar />
         <Header />
-        <div className="realtors">Top 3 realtors</div>
+        <Realtors />
         <Features />
         <Story />
         <Homes />

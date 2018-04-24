@@ -11,10 +11,6 @@
 @import '../components/Homes/Homes';
 @import '../components/Homes/HomeCard';
 @import '../components/LandingPage';
+@import '../components/Realtors';
 @import '../components/Sidebar';
 @import '../components/Story';
-
-.realtors {
-  background-color: $color-secondary;
-  grid-column: col-start 7 / full-end;
-}
