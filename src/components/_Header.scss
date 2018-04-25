@@ -15,11 +15,11 @@
   grid-column: full-start / col-end 6;
   grid-row-gap: $spacing-s;
 
-  // Fit the columns to the largest piece of content, without any Line breaks
-  grid-template-columns: max-content;
+  // max-content fit the columns to the largest piece of content without any Line breaks, min-content breaks lines when no more empy space
+  grid-template-columns: minmax(min-content, max-content);
 
   // All available space for the first element (logo) and the rest are pushed to the bottom
-  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
 }
 
 .header__logo {
@@ -49,6 +49,7 @@
 }
 
 .header__press-logos {
+  align-items: center;
   display: grid;
   grid-column-gap: $spacing-m;
   grid-template-columns: repeat(4, 1fr);
@@ -56,6 +57,7 @@
 
   img {
     filter: brightness(70%);
-    height: 2.25rem; // Define only heights so they align horizontally nice
+    max-height: 2.25rem; // Define only heights so they align horizontally nice
+    max-width: 100%; // Has to be defined to keep the scale when resizing
   }
 }

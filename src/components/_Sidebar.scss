@@ -5,7 +5,12 @@
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1; // Start at the beginning, stretch until the end
   justify-content: center;
-  padding-top: $spacing-m;
+
+  @media only screen and (max-width: $bp-tablet-land) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    justify-content: flex-end;
+  }
 }
 
 .nav-btn,
@@ -14,8 +19,14 @@
   border: none;
   border-radius: 0;
   cursor: pointer;
+  margin-top: $spacing-s;
   outline: none;
-  padding: $spacing-s;
+  padding: $spacing-m $spacing-s;
+
+  @media only screen and (max-width: $bp-tablet-land) {
+    margin: 0;
+    margin-right: $spacing-xs;
+  }
 }
 
 .spanburger {
@@ -40,5 +51,15 @@
 
   &::after {
     transform: translateY(1.3rem);
+  }
+
+  @media only screen and (max-width: $bp-tablet-land) {
+    &::before {
+      transform: translateY(-1.2rem);
+    }
+
+    &::after {
+      transform: translateY(1rem);
+    }
   }
 }

@@ -8,6 +8,10 @@
 
 html {
   font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-desktop) {
+    font-size: 58%;
+  }
 }
 
 body {
@@ -57,4 +61,20 @@ a {
     [center-end]
     minmax(6rem, 1fr)
     [full-end];
+
+  // Remove the first column and add a new row for sidebar
+  @media only screen and (max-width: $bp-tablet-land) {
+    grid-template-rows: 6rem minmax(80vh, 45rem) min-content 40vw repeat(
+      3,
+      min-content
+    );
+    grid-template-columns:
+      [full-start]
+      minmax(6rem, 1fr)
+      [center-start]
+      repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end]
+      minmax(6rem, 1fr)
+      [full-end];
+  }
 }
