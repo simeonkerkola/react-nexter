@@ -35,7 +35,7 @@ const Footer = () => (
           </a>
         </li>
       </ul>
-      <p className="copyright">&copy; Copyright {new Date().getFullYear()} by Simeon Kerkola</p>
+      <p className="copyright">&copy; Copyright {new Date().getFullYear()} Simeon Kerkola</p>
     </nav>
   </footer>
 );

@@ -12,6 +12,10 @@ html {
   @media only screen and (max-width: $bp-desktop) {
     font-size: 58%;
   }
+
+  @media only screen and (max-width: $bp-tablet-port) {
+    font-size: 53%;
+  }
 }
 
 body {
@@ -41,8 +45,8 @@ a {
   // 4th row, height of its content
   // 5th row, height of its content
   // 6th row, height of its content
-  grid-template-rows: minmax(80vh, 45rem) min-content 40vw repeat(
-    3,
+  grid-template-rows: minmax(45rem, 80vh) min-content 40vw repeat(
+    4,
     min-content
   );
 
@@ -64,17 +68,19 @@ a {
 
   // Remove the first column and add a new row for sidebar
   @media only screen and (max-width: $bp-tablet-land) {
-    grid-template-rows: 6rem minmax(80vh, 45rem) min-content 40vw repeat(
-      3,
-      min-content
-    );
+    grid-template-rows: 6rem minmax(45rem, calc(100vh - 6rem));
     grid-template-columns:
       [full-start]
-      minmax(6rem, 1fr)
+      minmax(3rem, 1fr)
       [center-start]
       repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
       [center-end]
-      minmax(6rem, 1fr)
+      minmax(3rem, 1fr)
       [full-end];
+  }
+
+  @media only screen and (max-width: $bp-tablet-port) {
+    // Header 100vh (exclude 6rem header )
+    grid-template-rows: 6rem minmax(45rem, calc(100vh - 6rem));
   }
 }

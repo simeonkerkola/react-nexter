@@ -5,6 +5,14 @@
   grid-column: col-start 7 / full-end;
   grid-row-gap: $spacing-m;
   justify-items: center;
+
+  @media only screen and (max-width: $bp-desktop) {
+    grid-column: full-start / full-end;
+  }
+
+  @media only screen and (max-width: $bp-desktop) {
+    padding: $spacing-m;
+  }
 }
 
 .realtors__list {
@@ -13,6 +21,14 @@
   grid-column-gap: $spacing-m;
   grid-row-gap: 5vh;
   grid-template-columns: repeat(2, max-content);
+
+  @media only screen and (max-width: $bp-desktop) {
+    grid-template-columns: repeat(3, max-content max-content);
+  }
+
+  @media only screen and (max-width: $bp-tablet-port) {
+    grid-template-columns: min-content max-content;
+  }
 }
 
 .realtors__img {

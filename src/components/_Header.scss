@@ -20,6 +20,14 @@
 
   // All available space for the first element (logo) and the rest are pushed to the bottom
   grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+
+  @media only screen and (max-width: $bp-desktop) {
+    grid-column: full-start / full-end;
+  }
+
+  @media only screen and (max-width: $bp-tablet-port) {
+    padding: $spacing-l;
+  }
 }
 
 .header__logo {
