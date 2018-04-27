@@ -1,17 +1,35 @@
 .features {
-  align-items: start;
-  display: grid;
-  grid-gap: $spacing-l; //sub-grid
   grid-column: center-start / center-end;
-  //  grid-template-columns: repeat(3, 1fr); // sub-grid
-
-  // auto-fit creates as many tracks as can fit to a width
-  // minmax width always between 25rem and 1fr
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); // sub-grid
   margin: $spacing-huge 0;
+
+  @supports (display: grid) {
+    align-items: start;
+    display: grid;
+    grid-gap: $spacing-l; //sub-grid
+
+    // auto-fit creates as many tracks as can fit to a width
+    // minmax width always between 25rem and 1f
+    grid-template-columns: repeat(3, minmax(25rem, 1fr)); // sub-grid
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-desktop) {
+      grid-template-columns: repeat(2, minmax(25rem, 40rem)); // sub-grid
+    }
+  }
 }
 
 .feature {
+  // Grid fallback
+  float: left;
+  margin-bottom: 6rem;
+  width: 33.333%;
+
+  @supports (display: grid) {
+    margin-bottom: 0;
+    width: auto;
+  }
+
+  //
   display: grid;
   grid-column-gap: $spacing-m;
   grid-template-columns: min-content, 1fr;

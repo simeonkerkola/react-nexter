@@ -45,7 +45,7 @@ a {
   // 4th row, height of its content
   // 5th row, height of its content
   // 6th row, height of its content
-  grid-template-rows: minmax(45rem, 80vh) min-content 40vw repeat(
+  grid-template-rows: minmax(45rem, 80vh) min-content minmax(min-content, 40vw) repeat(
     4,
     min-content
   );

@@ -30,7 +30,7 @@ a {
 
 .container {
   display: grid;
-  grid-template-rows: minmax(45rem, 80vh) min-content 40vw repeat(4, min-content);
+  grid-template-rows: minmax(45rem, 80vh) min-content minmax(min-content, 40vw) repeat(4, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   @media only screen and (max-width: 900px) {
     .container {
@@ -85,19 +85,32 @@ a {
     color: white; }
 
 .features {
-  align-items: start;
-  display: grid;
-  grid-gap: 4rem;
   grid-column: center-start / center-end;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   margin: 12rem 0; }
+  @supports (display: grid) {
+    .features {
+      align-items: start;
+      display: grid;
+      grid-gap: 4rem;
+      grid-template-columns: repeat(3, minmax(25rem, 1fr));
+      justify-content: center; }
+      @media only screen and (max-width: 1200px) {
+        .features {
+          grid-template-columns: repeat(2, minmax(25rem, 40rem)); } } }
 
 .feature {
+  float: left;
+  margin-bottom: 6rem;
+  width: 33.333%;
   display: grid;
   grid-column-gap: 3rem;
   grid-template-columns: min-content, 1fr;
   font-size: 1.7rem;
   align-items: center; }
+  @supports (display: grid) {
+    .feature {
+      margin-bottom: 0;
+      width: auto; } }
 
 .feature__icon {
   fill: #b28451;
@@ -425,22 +438,26 @@ a {
   display: block;
   font-size: 0;
   height: 2px;
-  width: 4.5rem; }
+  width: 4.2rem; }
   .spanburger::before, .spanburger::after {
     background-color: white;
     content: '';
     display: block;
     height: 2px;
-    width: 4.5rem; }
+    width: 4.2rem; }
   .spanburger::before {
     transform: translateY(-1.5rem); }
   .spanburger::after {
     transform: translateY(1.3rem); }
   @media only screen and (max-width: 900px) {
-    .spanburger::before {
-      transform: translateY(-1.2rem); }
-    .spanburger::after {
-      transform: translateY(1rem); } }
+    .spanburger {
+      width: 3.8rem; }
+      .spanburger::before {
+        transform: translateY(-1.2rem);
+        width: 3.8rem; }
+      .spanburger::after {
+        transform: translateY(1rem);
+        width: 3.8rem; } }
 
 .story {
   display: grid;

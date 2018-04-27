@@ -34,7 +34,7 @@
   display: block; // have to define
   font-size: 0;
   height: 2px;
-  width: 4.5rem;
+  width: 4.2rem;
 
   &::before,
   &::after {
@@ -42,7 +42,7 @@
     content: '';
     display: block; // have to define
     height: 2px;
-    width: 4.5rem;
+    width: 4.2rem;
   }
 
   &::before {
@@ -54,12 +54,16 @@
   }
 
   @media only screen and (max-width: $bp-tablet-land) {
+    width: 3.8rem;
+
     &::before {
       transform: translateY(-1.2rem);
+      width: 3.8rem;
     }
 
     &::after {
       transform: translateY(1rem);
+      width: 3.8rem;
     }
   }
 }
